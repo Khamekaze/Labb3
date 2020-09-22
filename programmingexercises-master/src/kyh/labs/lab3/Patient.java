@@ -2,9 +2,9 @@ package kyh.labs.lab3;
 
 class Patient {
 
-    boolean isSick;
-    String name;
-    String sickness;
+    private boolean isSick;
+    private String name;
+    private String sickness;
 
     Patient(String name) {
         this.name = name;
