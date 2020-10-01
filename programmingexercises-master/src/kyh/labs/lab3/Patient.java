@@ -2,7 +2,6 @@ package kyh.labs.lab3;
 
 class Patient {
 
-    private boolean isSick;
     private String name;
     private String sickness;
 
@@ -13,14 +12,11 @@ class Patient {
     Patient(String name, String sickness) {
         this.name = name;
         this.sickness = sickness;
-        if(sickness != null) {
-            isSick = true;
-        }
     }
 
     void takeMedication(Medicine medicine) {
         if(medicine.getTreatmentName().equals(sickness)) {
-            isSick = false;
+            sickness = null;
         }
     }
 
@@ -33,7 +29,7 @@ class Patient {
     }
 
     boolean isSick() {
-        return isSick;
+        return sickness != null;
     }
 
 }
